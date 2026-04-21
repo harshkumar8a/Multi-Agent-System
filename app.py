@@ -905,7 +905,9 @@ if r:
 
         # ── Tabs for clean navigation ──
         tab_report, tab_raw, tab_feedback = st.tabs([
-            "📝  Final Report",
+            "Final Report",
+            "Raw Outputs",
+            "Critic Feedback",
         ])
 
         with tab_report:
@@ -943,24 +945,28 @@ if r:
                 st.info("Report not yet generated — run the pipeline first.")
 
         with tab_raw:
+            has_raw_output = False
+
             if "search" in r:
+                has_raw_output = True
                 st.markdown("""
                 <div class="raw-card">
-                    <div class="raw-card-label">🔍 Search Agent Output</div>
+                    <div class="raw-card-label">Search Agent Output</div>
                 """, unsafe_allow_html=True)
                 st.markdown(f'<div class="raw-text">{r["search"]}</div>', unsafe_allow_html=True)
                 st.markdown("</div>", unsafe_allow_html=True)
 
             if "reader" in r:
+                has_raw_output = True
                 st.markdown("""
                 <div class="raw-card">
-                    <div class="raw-card-label">📄 Reader Agent Output</div>
+                    <div class="raw-card-label">Reader Agent Output</div>
                 """, unsafe_allow_html=True)
                 st.markdown(f'<div class="raw-text">{r["reader"]}</div>', unsafe_allow_html=True)
                 st.markdown("</div>", unsafe_allow_html=True)
 
-            if not r:
-                st.info("No raw data yet — run the pipeline first.")
+            if not has_raw_output:
+                st.info("No raw outputs available yet.")
 
         with tab_feedback:
             if "critic" in r:
