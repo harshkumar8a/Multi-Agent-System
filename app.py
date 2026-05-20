@@ -5,9 +5,7 @@ import pandas as pd
 from src.graph.workflow import graph
 
 
-# =========================================================
 # PAGE CONFIG
-# =========================================================
 
 st.set_page_config(
     page_title="ResearchAgent",
@@ -15,16 +13,12 @@ st.set_page_config(
     layout="wide"
 )
 
-# =========================================================
 # SESSION STATE
-# =========================================================
 
 if "results" not in st.session_state:
     st.session_state.results = None
 
-# =========================================================
 # HEADER
-# =========================================================
 
 st.title("🔬 Multi-Agent Research System")
 
@@ -37,9 +31,7 @@ AI-powered research pipeline using:
 - Streamlit Dashboard
 """)
 
-# =========================================================
 # INPUT
-# =========================================================
 
 topic = st.text_input(
     "Enter Research Topic",
@@ -50,9 +42,7 @@ run_button = st.button(
     "Run Research Pipeline"
 )
 
-# =========================================================
 # RUN GRAPH
-# =========================================================
 
 if run_button:
 
@@ -101,17 +91,13 @@ if run_button:
 
             st.session_state.results = result
 
-# =========================================================
 # DISPLAY RESULTS
-# =========================================================
 
 if st.session_state.results:
 
     result = st.session_state.results
 
-    # =====================================================
     # FINAL REPORT
-    # =====================================================
 
     st.header("📝 Research Report")
 
@@ -130,9 +116,7 @@ if st.session_state.results:
         mime="text/markdown"
     )
 
-    # =====================================================
     # CRITIQUE
-    # =====================================================
 
     st.header("🧐 Critic Feedback")
 
@@ -143,9 +127,7 @@ if st.session_state.results:
         )
     )
 
-    # =====================================================
     # OBSERVABILITY METRICS
-    # =====================================================
 
     st.header("📊 Pipeline Observability")
 
@@ -179,9 +161,7 @@ if st.session_state.results:
         use_container_width=True
     )
 
-    # =====================================================
     # AI EVALUATION
-    # =====================================================
 
     st.header("🧠 AI Evaluation")
 
@@ -193,9 +173,7 @@ if st.session_state.results:
     # evaluation is STRING now
     st.markdown(evaluation)
 
-    # =====================================================
     # SOURCES
-    # =====================================================
 
     st.header("🌐 Sources")
 
@@ -203,9 +181,7 @@ if st.session_state.results:
 
         st.markdown(f"- {url}")
 
-    # =====================================================
     # RAW SCRAPED CONTENT
-    # =====================================================
 
     with st.expander(
         "📄 Raw Scraped Content"
@@ -218,18 +194,14 @@ if st.session_state.results:
             )
         )
 
-    # =====================================================
     # TOTAL RUNTIME
-    # =====================================================
 
     st.success(
         f"Pipeline completed in "
         f"{result.get('total_runtime', 0)} seconds"
     )
 
-# =========================================================
 # FOOTER
-# =========================================================
 
 st.markdown("---")
 
