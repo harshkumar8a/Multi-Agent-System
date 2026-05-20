@@ -1,7 +1,7 @@
 # Multi-Agent AI System for Web Research
 
 
-![alt text](multi-agent-ui-image.png)
+
 
 This repository contains a Multi-Agent AI System designed for automated web research and data extraction. By combining the search capabilities of Tavily with the precision of BeautifulSoup, the system can autonomously find relevant topics and scrape detailed information to provide comprehensive insights.
 
@@ -21,6 +21,11 @@ This repository contains a Multi-Agent AI System designed for automated web rese
 
 5. **UV Environment**: Managed using uv for lightning-fast, reproducible python environment management.
 
+6. **Observability**: Use for tell me performance of the Agent like latency, metrics, hallucination, etc.
+
+
+
+
 
 ## Setup and Installation
 This project uses uv for environment and dependency management.
@@ -29,7 +34,7 @@ Clone the repository:
 
 Bash
 
-    git clone https://github.com/yourusername/multi-agent-researcher.git
+    git clone https://github.com/harshkumar8a/Multi-Agent-System.git
     cd multi-agent-researcher
 
 Install dependencies:
@@ -37,16 +42,25 @@ Install dependencies:
 Bash
 
     uv init
-    source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+    .venv\Scripts\activate
     uv sync
 
 Configure API Keys:
 
 Create a .env file and add your credentials:
 
+    TAVILY_API_KEY = "Tavily-api-key"
 
-    TAVILY_API_KEY=your_tavily_key_here
-    OPENAI_API_KEY=your_openai_key_here
+    LANGCHAIN_API_KEY="API_KEY"
+    LANGCHAIN_PROJECT="Project-Name"
+    LANGCHAIN_TRACING_V2=true
+    LANGCHAIN_ENDPOINT=https://api.smith.langchain.com
+
+    # ── Local model (Ollama) ────────────────────────────────────────────────────────
+    # Install Ollama: https://ollama.ai
+    # Pull model:     ollama pull llama3.2
+    OLLAMA_BASE_URL=http://localhost:11434
+    OLLAMA_MODEL="Model-Name"
 
 Run the application:
 
