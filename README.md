@@ -5,6 +5,49 @@
 
 This repository contains a Multi-Agent AI System designed for automated web research and data extraction. By combining the search capabilities of Tavily with the precision of BeautifulSoup, the system can autonomously find relevant topics and scrape detailed information to provide comprehensive insights.
 
+## Project Structure
+
+        MULTI-AGENT-SYSTEM/
+        │
+        ├── .venv/
+        │
+        ├── src/
+        │   ├── __pycache__/
+        │   │
+        │   ├── config/
+        │   │
+        │   ├── graph/
+        │   │   ├── __pycache__/
+        │   │   ├── __init__.py
+        │   │   ├── nodes.py
+        │   │   ├── state.py
+        │   │   └── workflow.py
+        │   │
+        │   ├── observability/
+        │   │   ├── __pycache__/
+        │   │   ├── __init__.py
+        │   │   ├── evaluators.py
+        │   │   ├── logging_config.py
+        │   │   └── metrics.py
+        │   │
+        │   ├── prompts/
+        │   │   ├── __pycache__/
+        │   │   ├── __init__.py
+        │   │   ├── critic_prompt.py
+        │   │   └── writer_prompt.py
+        │   │
+        │   └── tools/
+        │
+        ├── __init__.py
+        ├── .env
+        ├── .gitignore
+        ├── .python-version
+        ├── app.py
+        ├── pyproject.toml
+        ├── README.md
+        ├── tools.py
+        └── uv.lock
+    
 
 
 
