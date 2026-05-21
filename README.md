@@ -114,6 +114,6 @@ Run the application:
 
 **Name**: Harsh Kumar
 
-**Email**: harshkumar811h@gmail.com
+**Email**: [Link](harshkumar811h@gmail.com)
 
 **LinkedIn**: [Link](https://www.linkedin.com/in/harshkumar-8h/)
