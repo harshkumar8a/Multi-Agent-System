@@ -2,6 +2,9 @@
 
 
 
+<p align="center">
+  <img src="assest\video.gif" width="400" alt="Alt Text">
+</p>
 
 This repository contains a Multi-Agent AI System designed for automated web research and data extraction. By combining the search capabilities of Tavily with the precision of BeautifulSoup, the system can autonomously find relevant topics and scrape detailed information to provide comprehensive insights.
 
