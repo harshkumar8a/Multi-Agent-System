@@ -113,6 +113,14 @@ Run the application:
     streamlit run app.py
 
 
+# Evalution Metrix
+
+<p float="left">
+  <img src="assest\evalutionMetrix.png" width="47%" style="margin-right: 10px;" />
+  <img src="assest\evalutionMtx2.png" width="47%" />
+</p>
+
+
 # Connect to me 
 
 **Name**: Harsh Kumar
